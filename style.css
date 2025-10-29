@@ -78,7 +78,7 @@ body {
     background-color: #333;
 }
 
-#addBtn {
+.addBtn {
     display: flex;
     width: 15%;
     min-width: 100px;
@@ -94,10 +94,10 @@ body {
     cursor: pointer;
 }
 
-#addBtn:hover {
+.addBtn:hover {
     background-color: #444;
 }
 
-#addBtn:active {
+.addBtn:active {
     scale: 0.97;
 }
