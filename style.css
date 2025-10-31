@@ -5,20 +5,13 @@
 }
 
 body {
-    background-color: #222;
-    color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-#content {
-    display: flex;
-    flex-direction: column;
 }
 
 #welcomeDiv {
     display: flex;
     flex-direction: column;
-    align-self: center;
+    justify-self: center;
     align-items: center;
     justify-content: space-between;
     width: 60%;
@@ -36,68 +29,87 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    border: 1px solid #333;
     font-weight: 600;
     transition: 100ms;
-    background-color: #333;
     cursor: pointer;
 }
 
-    #orderBtn:hover {
-        background-color: #444;
-    }
+#orderBtn:hover {
+    background-color: #444;
+    color: white;
+}
 
-    #orderBtn:active {
-        scale: 0.97;
-    }
+#orderBtn:active,
+.item:hover {
+    scale: 0.97;
+}
 
 #welcomeHeader {
     font-size: 3rem;
 }
 
-#menu {
+#content {
     display: none;
-    flex-direction: column;
-    width: 60%;
-    align-self: center;
-    align-items: center;
-    justify-content: space-between;
-    width: 60%;
-    height: 100vh;
-    padding: 4vh 0 4vh 0;
-    gap: 1rem;
-    user-select: none;
+    justify-self: center;
+    width: 468px;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
 }
 
-#items {
+#menu {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .item {
+    width: 140px;
+    height: 160px;
     border-radius: 5px;
-    background-color: #333;
-}
-
-.addBtn {
-    display: flex;
-    width: 15%;
-    min-width: 100px;
-    height: 5%;
-    min-height: 35px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    font-weight: 600;
+    border: 1px solid #333;
+    padding: 1rem;
+    margin: 0.5rem;
     transition: 100ms;
-    background-color: #333;
-    margin-top: 1rem;
     cursor: pointer;
 }
 
-.addBtn:hover {
-    background-color: #444;
+.item img {
+    width: 100px;
+    height: 70px;
 }
 
-.addBtn:active {
+#footer {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #333;
+    color: white;
+}
+
+#paymentFooter {
+    display: flex;
+    align-items: center;
+    width: 468px;
+    height: 100%;
+    padding: 0.5rem;
+    font-weight: 600;
+}
+
+#payBtn {
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    background-color: #2dcb74;
+    border-radius: 5px;
+    margin-left: auto;
+    transition: 100ms;
+    cursor: pointer;
+    user-select: none;
+}
+
+#payBtn:hover {
     scale: 0.97;
 }
